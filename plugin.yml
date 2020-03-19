@@ -1,0 +1,16 @@
+name: AntiHax
+author: Flow
+main: AntiHax\Main
+api: [3.0.0]
+version: 1.0
+
+permissions:
+  antihax.perm:
+    description: rien
+    default: op
+  antihax.fly:
+    description: rien
+    default: op
+  antihax.reach:
+    description: rien
+    default: op
