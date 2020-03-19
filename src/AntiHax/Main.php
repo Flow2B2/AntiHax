@@ -30,9 +30,7 @@ class Main extends PluginBase implements Listener{
 		$this->config = new Config($this->getDataFolder() . 'config.yml', Config::YAML);
 		$this->config->set("antihax-use", false);
 		$this->config->save();
-		Server::getInstance()->getCommandMap()->registerAll("AntiHaxCommands", [
-			new AHCommand("antihax", "To enable or disable the antihax plugin !", "antihax", ["ah","antihax"])
-		]);
+		Server::getInstance()->getCommandMap()->register('antihax', new AHCommand($this));
 	}
 
 	private function loadManagers(){
